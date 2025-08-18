@@ -627,11 +627,12 @@ gap: 0.50px; /* menos espacio entre items */
   .name-title { font-size: 3rem; }
   .section-title { font-size: 1.8rem; }
   .countdown-box { width: 100%; }
-}
 
-@media (max-width: 600px) {
-  .timeline-item .timeline-content {
+    .timeline-item .timeline-content {
     margin: 20px auto;   /* centrado y con aire */
     text-align: center;
     max-width: 90%;
   }
+}
+
+
