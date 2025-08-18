@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>👑Mis XV Años👑</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allura&family=Bad+Script&family=Beau+Rivage&family=Bebas+Neue&display=swap">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body class="no-scroll">
+    <!-- gif scroll -->
+<button id="btnScrollTop" class="btn-scroll-top" title="Ir arriba">
+  &#8679; <!-- Flecha hacia arriba -->
+</button>
+
+  <!-- Sección de sobre inicial -->
+<section id="sobre-inicial" class="fullscreen-overlay">
+  <div class="sobre-container">
+    <img src="img/sobre2.jpg" alt="Sobre elegante de invitación" class="sobre-img">
+    <canvas id="btnCera3D" width="200" height="200" class="btn-cera-canvas"></canvas>
+  </div>
+</section>
+
+  <!-- Sección 1: Portada -->
+  <section class="cover-section">
+    <div class="video-background">
+      <video autoplay muted loop playsinline id="video-fondo">
+        <source src="video/disney.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+
+      <div class="cover-content">
+        <div id="contenido-retardado" style="opacity: 0;">
+          <h1 class="name-title">Erika</h1> 
+        </div>
+        <audio id="audio-fondo" loop>
+          <source src="audio/cancion.mp3" type="audio/mp3">
+        </audio>
+      </div>
+     <img src="img/scroll2.gif" alt="Desliza hacia abajo" class="desliza-hint" style="display: none;">
+
+    </div>
+  </section>
+
+  <!-- Contenido principal -->
+  <main class="container">
+    
+    <!-- Sección 2: Mensaje -->
+    <section class="message-section parallax" data-bg="estrellas.gif">
+      <img src="img/corona2.png" alt="Icono decorativo de corona" class="crown">
+      <div class="section-bg">
+        <div class="section-content">
+          <p class="thank-you">Hoy celebro con mucha alegría y emoción el paso hacia una nueva etapa 
+          de mi vida. Los XV años no solo marcan un cambio de edad, sino el inicio de una nueva
+          aventura llena de sueños, retos y aprendizajes. Quiero agradecerles de todo corazón por
+          ser parte de mi vida, por sus consejos, su apoyo y sobre todo por su amor.
+          Sé que cada paso que doy me lleva a algo más grande, y nada de esto sería posible sin 
+          ustedes a mi lado. Por eso, me gustaría invitarlos a acompañarme en este día tan especial
+          para compartir juntos una celebración sencilla, pero llena de significado, en la que podamos
+          disfrutar de la compañía de quienes más quiero.
+          A veces las palabras no alcanzan para expresar todo lo que siento, pero quiero que sepan
+          que su presencia en mi vida es el mejor regalo que podría pedir. 
+          ¡Gracias por ser parte de mi historia! Espero que puedan acompañarme y juntos hacer de este
+          día un recuerdo inolvidable.</p>
+          <h2 class="section-title reveal-tex">Mis XV Años</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 3: Familia -->
+    <section class="message-section parallax" data-bg="desenfoque.jpeg">
+      <img src="img/corona2.png" alt="Icono decorativo de corona" class="crown">
+      <div class="section-bg">
+        <div class="section-content">
+          <h3 class="section-subtitle">En compañía de mis Papás</h3>
+          <p class="names">Ricardo Santos López<br>&amp;<br>Areli estrada Arredondo</p>
+          <h3 class="section-subtitle">Mis Padrinos</h3>
+          <p class="names">Adrián López Cabrera<br>&amp;<br>Roxana Manzano Orozco</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 4: Fecha -->
+<section class="message-section parallax" data-bg="estrellas.gif">
+  <img src="img/corona2.png" alt="Icono decorativo de corona" class="crown">
+  <div class="section-bg">
+    <div class="section-content">
+      <h2 class="section-title">– Fecha –</h2>
+      <img src="img/fecha.png" alt="Calendario 14 de Noviembre 2025" class="calendar">
+      <h2 class="section-title">– Faltan –</h2>
+      <div id="countdown">
+        <div class="countdown-box">
+          <div class="flip-card" id="days">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">00</div>
+              <div class="flip-card-back">00</div>
+            </div>
+          </div>
+          <div class="countdown-label">DÍAS</div>
+        </div>
+        <div class="countdown-box">
+          <div class="flip-card" id="hours">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">00</div>
+              <div class="flip-card-back">00</div>
+            </div>
+          </div>
+          <div class="countdown-label">HORAS</div>
+        </div>
+        <div class="countdown-box">
+          <div class="flip-card" id="minutes">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">00</div>
+              <div class="flip-card-back">00</div>
+            </div>
+          </div>
+          <div class="countdown-label">MINUTOS</div>
+        </div>
+        <div class="countdown-box">
+          <div class="flip-card" id="seconds">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">00</div>
+              <div class="flip-card-back">00</div>
+            </div>
+          </div>
+          <div class="countdown-label">SEGUNDOS</div>
+        </div>
+      </div>
+      <h2 class="section-title">Para el gran día</h2>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Sección 5: Recepción -->
+<section class="message-section parallax" data-bg="desenfoque.jpeg">
+  <img src="img/corona2.png" alt="Icono decorativo de corona" class="crown">
+  <div class="section-bg">
+    <div class="section-content">
+      <h2 class="section-title">– Recepción –</h2>
+      <div class="info-box">
+        <div class="icon">⏰</div>
+        <p class="info-text"><strong>8:00 pm.</strong></p>
+      </div>
+      <div class="info-box">
+        <p class="info-text"><strong>Salón Carmín</strong></p>
+        <p class="address">24 de Marzo de 1867 #1470, Leyes de Reforma 3ra Secc, Iztapalapa, 09310, CDMX.</p>
+      </div>
+
+      <!-- 🔹 Carrusel de imágenes -->
+      <div class="carousel">
+        <div class="carousel-track">
+          <img src="img/salon1.png" alt="Salón Carmín 1">
+          <img src="img/salon2.png" alt="Salón Carmín 2">
+          <img src="img/salon3.png" alt="Salón Carmín 3">
+        </div>
+        <button class="carousel-btn prev">‹</button>
+        <button class="carousel-btn next">›</button>
+      </div>
+
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Salon+Carmin,+24+de+Marzo+de+1867+1470,+Leyes+de+Reforma+3ra+Secc,+Iztapalapa,+09310+Ciudad+de+México,+CDMX" 
+          target="_blank" 
+          class="map-button">
+          ABRIR MAPA</a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Sección 6: Vestimenta -->
+    <section class="message-section parallax" data-bg="estrellas.gif">
+      <img src="img/corona2.png" alt="Icono decorativo de corona" class="crown">
+      <div class="section-bg">
+        <div class="section-content">
+          <h2 class="section-title">– Código de vestimenta –</h2>
+          <p class="info-text">Formal</p>
+          <img src="img/formal1.png" alt="Ejemplo de vestimenta formal" class="dresscode-image">
+          <p class="dresscode-note">Color <strong>Azul rey</strong> reservado para la quinceañera.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 7: Itinerario -->
+<section class="message-section parallax" data-bg="desenfoque.jpeg">
+  <img src="img/corona2.png" alt="Icono decorativo de corona" class="crown">
+  <div>
+  <div>
+  <div class="section-bg">
+    <div class="section-content">
+      <h2 class="section-title">-Itinerario-</h2>
+      <div class="timeline-wrapper">
+        <canvas id="timelineCanvas"></canvas>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content"><strong>Misa</strong><br>7:00 pm.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content"><strong>Recepción</strong><br>8:00 pm.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content"><strong>Cena</strong><br>9:00 pm.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content"><strong>Vals </strong><br>10:00 pm.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content"><strong>descontrol</strong><br>despues de <br> 11:20 pm.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</section>
+
+<!-- Sección 8: Confirmación -->
+<section class="message-section parallax scroll" data-bg="estrellas.gif">
+  <img src="img/corona2.png" alt="Icono decorativo de corona" class="crown">
+  <div class="section-bg">
+    <div class="section-content">
+      <h2 class="section-title">– Confirma tu asistencia –</h2>
+      <p class="info-text"><strong>Será una noche increíble,</strong><br>¡Te esperamos!</p>
+
+      <!-- Caja de confirmación con Firebase -->
+      <input type="text" id="nombre" placeholder="Escribe tu nombre..." class="input-confirmacion"/>
+      <button onclick="confirmarAsistencia()" class="whatsapp-button">Confirma tu asistencia</button>
+
+      <p class="guest-note">✨con cariño Erika✨</p>
+    </div>
+  </div>
+</section>
+
+<!--  Constelación interactiva -->
+<section id="constelacion" class="message-section parallax scroll" data-bg="estrellas.gif">
+ <h3>
+    Constelación de invitados confirmados <br>
+    <button onclick="confirmarAsistencia2()" class="map-button">Mira los Invitados Confirmados</button>
+  </h3>
+ <canvas id="constelacion-canvas"></canvas>
+</section>
+
+
+  </main>
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script> 
+</body>
+</html>

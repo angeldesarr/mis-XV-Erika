@@ -1,0 +1,630 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: 'Bad Script', cursive;
+  overflow-x: hidden;
+  background: url('img/blanco.jpeg') center / cover no-repeat fixed;
+  color: #C0C0C0;
+}
+#mariposas-bg {
+  position: fixed;  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  pointer-events: none;
+  display: none;
+}
+
+.container {  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Secciones comunes */
+.section-bg {
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.section-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.section-title {
+  font-family: 'Allura', cursive;
+  font-size: 2.9rem;
+  color: #C0C0C0;
+  margin: 20px 0;
+}
+
+.section-subtitle {
+  font-family: 'Bad Script', cursive;
+  font-size: 1.5rem;
+  color: #C0C0C0;
+  margin: 20px 0;
+}
+
+/* Portada */
+.cover-section {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.cover-image {
+  width: 100%;
+  min-height: 728px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 150px;
+  position: relative;
+}
+
+.crown {
+  width: 100px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,0.3));
+}
+
+/* Secciones */
+.message-section,
+.family-section,
+.date-section,
+.reception-section,
+.dresscode-section,
+.itinerary-section,
+.confirmation-section {
+  position: relative;
+  padding-top: 60px;
+  margin-top: 40px;
+}
+
+.name-title {
+  font-family: 'Allura', cursive;
+  font-size: 7rem;
+  color: #fff;
+  margin: 11px 0;
+  text-shadow: 0 3px 6px  #C0C0C0;
+  letter-spacing: 2px;
+  background: linear-gradient(to right, #d8f0ff, #ffffff, #d8f0ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.name-title::after {
+  content: 'XV';
+  position: absolute;
+  bottom: -2px;
+  left: 25%;
+  width: 55%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #d8f0ff, transparent);
+}
+
+/* Loader opcional */
+#contenido-retardado::before {
+  transition: opacity 0.5s ease-in-out;
+  content: "Cargando...";
+  display: block;
+  color: white;
+  font-family: 'Allura', cursive;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0.0;
+}
+
+#contenido-retardado[style*="opacity: 1"]::before {
+  display: none;
+}
+
+/* Contador y fecha*/
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.countdown-box {
+  text-align: center;
+}
+
+.countdown-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #c0c0c0;
+}
+
+.countdown-label {
+  font-size: 0.8rem;
+  color: #c0c0c0;
+}
+
+.calendar {
+  width: 200px;   /* ajusta a tu gusto */
+  height: auto;   /* mantiene proporción */
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flip-card {
+  perspective: 1000px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #d8f0ff;
+  color: #0b1e5e;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.flip-card-back {
+  transform: rotateX(180deg);
+}
+
+
+/* Carrusel */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 200px; /* ajusta al tamaño que quieras */
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+
+/* Botones */
+.map-button, .whatsapp-button {
+  display: inline-block;
+  background-color: #0b1e5e;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+}
+
+.map-button:hover, .whatsapp-button:hover {
+  background-color: #d8f0ff;
+  color: #4169E1;
+  transform: scale(1.05);
+}
+
+
+/* =======================
+   Timeline zigzag corregido
+   ======================= */
+.timeline-wrapper {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+ padding: 0.100px 0; /* menos alto */
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+gap: 0.50px; /* menos espacio entre items */
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+} 
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: auto;
+  margin-right: 60px; /* distancia del centro */
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: 60px;
+  margin-right: auto;
+  text-align: left;
+}
+
+.timeline-marker {
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-content {
+  max-width: 300px;
+  padding: 12px 18px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 500;
+  position: relative; /* importante para el zigzag */
+  z-index: 2; /* sobre el canvas */
+}
+
+
+
+/* corazon inicial en blanco */
+.timeline-icon {
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: transparent;
+  color: white;
+  transition: color 0.3s ease;
+  z-index: 2;
+}
+
+.btn-scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px; /* esquina inferior izquierda */
+  width: 50px;
+  height: 50px;
+  background-color: #0b1e5e; /* azul rey */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: none; /* oculto por defecto */
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.btn-scroll-top:hover {
+  background-color: #153b9d;
+  transform: scale(1.1);
+}
+
+
+/* corazon azul al bajar */
+.timeline-icon.filled {
+  color: #0b1e5e;
+  text-shadow: 0 0 10px rgba(0,0,255,0.5);
+}
+
+
+
+/* Canvas central para corazones y barra vertical */
+#timelineCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0; /* abajo de los elementos, para que los markers sigan visibles */
+  background: transparent;
+}
+
+
+
+/* Video portada */
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+}
+
+/* Sobre inicial */
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #C0C0C0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+  overflow: hidden;
+}
+
+.sobre-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre-img {
+  width: 95%;
+  height: 95%;
+  object-fit: contain;
+  animation: flotar 3s ease-in-out infinite;
+}
+
+#abrir-sobre {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 18px 36px;
+  font-family: 'Allura', cursive;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #d4af37, #b38e1f);
+  color: #5c3a0f;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3), inset 0 -3px 5px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: flotarBoton 3s ease-in-out infinite;
+}
+
+#abrir-sobre:hover {
+  transform: scale(1.05);
+  background-color: #e6c256;
+}
+
+/* Efecto al presionar */
+#abrir-sobre:active {
+  transform: translateX(-50%) translateY(4px) scale(0.98);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2), inset 0 3px 5px rgba(0,0,0,0.3);
+  background: linear-gradient(145deg, #b38e1f, #d4af37);
+}
+
+.btn-cera-canvas {
+  position: absolute;
+  top: 80%; /* antes era 50% */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 20;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+
+/* Animaciones */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes press {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Desliza hint */
+.desliza-hint {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 90px;
+  opacity: 1;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.desliza-hint:hover {
+  opacity: 0.7;
+}
+
+/* Parallax */
+.parallax {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translateY(0);
+  z-index: -1;
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+}
+/************************/
+/* para la constelacion*/
+/************************/
+  #constelacion {
+    margin-top: 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #111;
+  }
+  
+#constelacion-canvas {
+  width: 100%;
+  height: 700px; /* puedes ajustar */
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  display: block; /* evita problemas de inline */
+}
+  /* Animaciones GSAP */
+  .scroll {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .sobre-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  #abrir-sobre {
+    bottom: 15%;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+  }
+
+  .section-title { font-size: 2rem; }
+  @media (max-width: 768px) {
+  #countdown {
+    flex-wrap: nowrap; /* 👈 mantenemos en una sola fila */
+    gap: 10px; /* menos separación entre cajas */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .countdown-box {
+    width: auto;
+    margin-bottom: 0;
+  }
+  .countdown-number {
+    font-size: 1.4rem; /* más pequeño */
+  }
+  .countdown-label {
+    font-size: 0.7rem; /* más pequeño */
+  }
+}
+  .crown { width: 60px; top: -10px; }
+  .message-section,
+  .family-section,
+  .date-section,
+  .reception-section,
+  .dresscode-section,
+  .itinerary-section,
+  .confirmation-section {
+    padding-top: 50px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .name-title { font-size: 3rem; }
+  .section-title { font-size: 1.8rem; }
+  .countdown-box { width: 100%; }
+}
