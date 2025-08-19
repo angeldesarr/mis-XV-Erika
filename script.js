@@ -668,3 +668,18 @@ function confirmarAsistencia2() {
     alert("Ocurrió un error al obtener los invitados.");
   });
 }
+
+
+//modo ligero
+if (window.innerWidth <= 480 || navigator.connection.saveData) {
+  document.body.classList.add("modo-ligero");
+}
+
+
+
+
+
+
+
+
+
