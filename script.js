@@ -729,3 +729,38 @@ function confirmarAsistencia2() {
       alert("Ocurrió un error al obtener los invitados.");
     });
 }
+
+
+//*************************************************
+//ultima funcion mensjae
+//*************************************************
+
+function enviarMensajeWhatsApp() {
+  const inputMensaje = document.getElementById("mensaje");
+  const mensaje = inputMensaje.value.trim();
+
+  if (!mensaje) {
+    alert("Por favor, escribe un mensaje");
+    return;
+  }
+
+  if (contieneMalasPalabras(mensaje)) {
+    alert("Por favor, no uses lenguaje ofensivo");
+    return;
+  }
+
+  // Crear link a WhatsApp con el mensaje personalizado
+  const link = `https://wa.me/+5215513861206?text=${encodeURIComponent(mensaje)}`;
+
+  // Redirigir a WhatsApp
+  window.location.href = link;
+
+  // Limpiar el campo
+  inputMensaje.value = "";
+}
+
+function contieneMalasPalabras(texto) {
+  const malasPalabras = []; // puedes agregar palabras si deseas
+  const textoLower = texto.toLowerCase();
+  return malasPalabras.some(palabra => textoLower.includes(palabra));
+}
