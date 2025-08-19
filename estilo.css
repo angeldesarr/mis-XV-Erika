@@ -776,3 +776,25 @@ gap: 0.50px; /* menos espacio entre items */
     margin-top: 15px;
   }
 }
+/*modo ligero*/
+body.modo-ligero, body.modo-ligero
+#timelineCanvas, body.modo-ligero .parallax::before {
+  display: none !important;
+}
+
+body.modo-ligero * {
+  animation: none !important;
+  transition: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
