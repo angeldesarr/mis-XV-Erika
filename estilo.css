@@ -601,11 +601,6 @@ gap: 0.50px; /* menos espacio entre items */
     max-width: 250px;
   }
 }
-    .btn-cera-canvas {
-    transform: translate(-50%, -30%);
-    top: 70%;
-    width: 250px;
-  }
 
 /* Teléfonos y pantallas pequeñas (<= 768px) */
 @media (max-width: 768px) {
