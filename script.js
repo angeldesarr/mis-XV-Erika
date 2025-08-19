@@ -671,9 +671,22 @@ function confirmarAsistencia2() {
 
 
 //modo ligero
-if (window.innerWidth <= 480 || navigator.connection.saveData) {
-  document.body.classList.add("modo-ligero");
+function checkModoLigero() {
+  const saveData = navigator.connection && navigator.connection.saveData;
+  if (window.innerWidth <= 480 || saveData) {
+    document.body.classList.add("modo-ligero");
+  } else {
+    document.body.classList.remove("modo-ligero");
+  }
 }
+
+// Ejecutar al cargar
+checkModoLigero();
+
+// (Opcional) Ejecutar al redimensionar
+window.addEventListener("resize", checkModoLigero);
+
+
 
 
 
