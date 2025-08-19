@@ -376,15 +376,11 @@ gap: 0.50px; /* menos espacio entre items */
   transform: scale(1.1);
 }
 
-
 /* corazon azul al bajar */
 .timeline-icon.filled {
   color: #0b1e5e;
   text-shadow: 0 0 10px rgba(0,0,255,0.5);
 }
-
-
-
 /* Canvas central para corazones y barra vertical */
 #timelineCanvas {
   position: absolute;
@@ -396,9 +392,6 @@ gap: 0.50px; /* menos espacio entre items */
   z-index: 0; /* abajo de los elementos, para que los markers sigan visibles */
   background: transparent;
 }
-
-
-
 /* Video portada */
 .video-background {
   position: relative;
@@ -577,63 +570,215 @@ gap: 0.50px; /* menos espacio entre items */
 
 
 /* Responsivo */
-@media (max-width: 768px) {
-  .sobre-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  #abrir-sobre {
-    bottom: 15%;
-    font-size: 1.2rem;
-    padding: 12px 25px;
+/* RESPONSIVE ACTUALIZADO */
+
+/* Tablets y pantallas medianas (<= 992px) */
+@media (max-width: 992px) {
+  .container {
+    padding: 0 15px;
   }
 
-  .section-title { font-size: 2rem; }
-  @media (max-width: 768px) {
-  #countdown {
-    flex-wrap: nowrap; /* 👈 mantenemos en una sola fila */
-    gap: 10px; /* menos separación entre cajas */
-    flex-direction: row;
+  .name-title {
+    font-size: 5rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .calendar {
+    width: 150px;
+  }
+
+  .timeline-content {
+    max-width: 90%;
+    padding: 10px 15px;
+  }
+
+  .carousel {
+    max-width: 250px;
+  }
+}
+  .btn-cera-canvas {
+    transform: translate(-50%, -30%);
+    top: 85%;
+    width: 80px;
+  }
+
+    .btn-cera-canvas {
+    transform: translate(-50%, -30%);
+    top: 65%;
+    width: 130px;
+  }
+
+/* Teléfonos y pantallas pequeñas (<= 768px) */
+@media (max-width: 768px) {
+  .cover-content {
+    padding-top: 80px;
+  }
+
+  .name-title {
+    font-size: 4rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .calendar {
+    width: 130px;
+  }
+
+  .carousel {
+    max-width: 200px;
+  }
+
+  .timeline-content {
+    max-width: 95%;
+    padding: 10px;
+  }
+
+  .map-button,
+  .whatsapp-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .fullscreen-overlay {
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0;
   }
-  .countdown-box {
-    width: auto;
-    margin-bottom: 0;
+
+    .sobre-img {
+    width: 90%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
   }
-  .countdown-number {
-    font-size: 1.4rem; /* más pequeño */
+
+   .sobre-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
   }
-  .countdown-label {
-    font-size: 0.7rem; /* más pequeño */
-  }
-}
-  .crown { width: 40px; top: -10px; }
-  .message-section,
-  .family-section,
-  .date-section,
-  .reception-section,
-  .dresscode-section,
-  .itinerary-section,
-  .confirmation-section {
-    padding-top: 1px;
+
+  #abrir-sobre {
+    position: static;
     margin-top: 20px;
+    font-size: 1.3rem;
+    padding: 12px 26px;
+    transform: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    animation: flotarBoton 3s ease-in-out infinite;
+  }
+
+  /* Mantenemos el zigzag en móviles, se verá bien */
+  .timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+    margin-right: 40px;
+    text-align: right;
+  }
+
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-left: 40px;
+    margin-right: auto;
+    text-align: left;
   }
 }
 
-@media (max-width: 500px) {
-  .name-title { font-size: 3rem; }
-  .section-title { font-size: 1.8rem; }
-  .countdown-box { width: 100%; }
-}
+/* Teléfonos MUY pequeños (<= 480px) */
+@media (max-width: 480px) {
+  .name-title {
+    font-size: 3rem;
+  }
 
-@media (max-width: 500px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .calendar {
+    width: 100px;
+  }
+
+  .carousel-btn {
+    font-size: 1.5rem;
+    padding: 3px 7px;
+  }
+
+  .btn-scroll-top {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+    .fullscreen-overlay {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+    .btn-cera-canvas {
+    width: 60px;
+    top: 87%;
+  }
+
+  /* Aquí sí eliminamos el zigzag para ahorrar espacio */
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .timeline-item .timeline-content {
+    margin: 0;
+    text-align: center;
+  }
+
+  .timeline-marker {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .timeline-content {
-     margin-top: 1px;
-    margin-bottom: 1px;
-    padding: 1px 7px;
-    box-shadow: 0 20px 68px rgba(0, 0, 0, 0.7)
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .carousel {
+    max-width: 90%;
+  }
+
+  .flip-card {
+    width: 50px;
+    height: 50px;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    font-size: 1.4rem;
+  }
+
+  #abrir-sobre {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin-top: 15px;
   }
 }
