@@ -603,8 +603,8 @@ gap: 0.50px; /* menos espacio entre items */
 }
     .btn-cera-canvas {
     transform: translate(-50%, -30%);
-    top: 65%;
-    width: 130px;
+    top: 70%;
+    width: 250px;
   }
 
 /* Teléfonos y pantallas pequeñas (<= 768px) */
@@ -735,8 +735,8 @@ gap: 0.50px; /* menos espacio entre items */
 
     .btn-cera-canvas {
     transform: translate(-50%, -30%);
-    top: 65%;
-    width: 130px;
+    top: 55%;
+    width: 95px;
   }
 
   /* Aquí sí eliminamos el zigzag para ahorrar espacio */
