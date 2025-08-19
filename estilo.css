@@ -570,8 +570,6 @@ gap: 0.50px; /* menos espacio entre items */
 
 
 /* Responsivo */
-/* RESPONSIVE ACTUALIZADO */
-
 /* Tablets y pantallas medianas (<= 992px) */
 @media (max-width: 992px) {
   .container {
@@ -603,12 +601,6 @@ gap: 0.50px; /* menos espacio entre items */
     max-width: 250px;
   }
 }
-  .btn-cera-canvas {
-    transform: translate(-50%, -30%);
-    top: 85%;
-    width: 80px;
-  }
-
     .btn-cera-canvas {
     transform: translate(-50%, -30%);
     top: 65%;
@@ -686,6 +678,12 @@ gap: 0.50px; /* menos espacio entre items */
     animation: flotarBoton 3s ease-in-out infinite;
   }
 
+  .btn-cera-canvas {
+    transform: translate(-50%, -30%);
+    top: 65%;
+    width: 130px;
+  }
+
   /* Mantenemos el zigzag en móviles, se verá bien */
   .timeline-item:nth-child(odd) .timeline-content {
     margin-left: auto;
@@ -724,8 +722,8 @@ gap: 0.50px; /* menos espacio entre items */
   }
 
   .btn-scroll-top {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     font-size: 20px;
   }
     .fullscreen-overlay {
@@ -736,8 +734,9 @@ gap: 0.50px; /* menos espacio entre items */
   }
 
     .btn-cera-canvas {
-    width: 60px;
-    top: 87%;
+    transform: translate(-50%, -30%);
+    top: 65%;
+    width: 130px;
   }
 
   /* Aquí sí eliminamos el zigzag para ahorrar espacio */
