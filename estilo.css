@@ -610,7 +610,7 @@ gap: 0.50px; /* menos espacio entre items */
     font-size: 0.7rem; /* más pequeño */
   }
 }
-  .crown { width: 60px; top: -10px; }
+  .crown { width: 40px; top: -10px; }
   .message-section,
   .family-section,
   .date-section,
@@ -618,8 +618,8 @@ gap: 0.50px; /* menos espacio entre items */
   .dresscode-section,
   .itinerary-section,
   .confirmation-section {
-    padding-top: 50px;
-    margin-top: 30px;
+    padding-top: 1px;
+    margin-top: 20px;
   }
 }
 
@@ -631,8 +631,8 @@ gap: 0.50px; /* menos espacio entre items */
 
 @media (max-width: 500px) {
   .timeline-content {
-    margin-top: 1px;
-    margin-bottom: 1px;
-     padding: 4px 9px;
+    margin-top: -4px;
+    margin-bottom: -4px;
+     padding: 1px 1px;
   }
 }
