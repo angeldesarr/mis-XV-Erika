@@ -750,7 +750,7 @@ function enviarMensajeWhatsApp() {
   }
 
   // Crear link a WhatsApp con el mensaje personalizado
-  const link = `https://wa.me/+5215513861206?text=${encodeURIComponent(mensaje)}`;
+  const link = `https://wa.me/+5212217968240?text=${encodeURIComponent(mensaje)}`;
 
   // Redirigir a WhatsApp
   window.location.href = link;
@@ -764,3 +764,4 @@ function contieneMalasPalabras(texto) {
   const textoLower = texto.toLowerCase();
   return malasPalabras.some(palabra => textoLower.includes(palabra));
 }
+
